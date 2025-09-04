@@ -1,0 +1,21 @@
+# Ignorar entorno virtual
+venv/
+.env/
+.venv/
+
+# Archivos de Python compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Video local (no subirlo al repo)
+pepper_video.mp4
