@@ -28,13 +28,6 @@ st.markdown(
         margin: 12px 0;
         box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
     }
-    .content-area {
-        background: linear-gradient(to bottom, #AED6F1, #D6EAF8);
-        padding:20px;
-        border-radius:20px;
-        min-height:300px;
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-    }
     .msg-user {
         background-color:#D5F5E3;
         padding:10px;
@@ -64,7 +57,7 @@ st.markdown("<div class='header'>PRESENTANDO NOVEDADES TECNOLÓGICAS CON PEPPER<
 # ---------------------------
 # Layout: tres columnas
 # ---------------------------
-col1, col2, col3 = st.columns([1, 1, 2])
+col1, col2, col3 = st.columns([1.3, 1.3, 0.8])  # derecha más angosta
 
 # ---------------------------
 # Columna 1: Video
@@ -89,7 +82,7 @@ with col2:
     st.markdown("<div class='card'><h4>Novedad Tecnológica 3</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
 
 # ---------------------------
-# Columna 3: Contenido + Chatbot alineados
+# Columna 3: Solo Chatbot
 # ---------------------------
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = [("bot", "Hola 👋, soy el chatbot de Pepper. Pregúntame lo que quieras.")]
@@ -102,13 +95,6 @@ def get_bot_reply(user_text: str) -> str:
     return "🤖 Soy un chatbot demo. Pregúntame sobre el video o las novedades."
 
 with col3:
-    # Contenido
-    st.markdown("<div class='content-area'>", unsafe_allow_html=True)
-    st.subheader("📌 Contenido Tecnológico")
-    st.write("Aquí aparecerá la explicación detallada de las novedades y recursos adicionales.")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-    # Chatbot (justo debajo, alineado)
     st.markdown("### 💬 Chatbot de confianza")
     for role, msg in st.session_state.chat_history:
         if role == "user":
