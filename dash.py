@@ -61,8 +61,8 @@ with col1:
 # ---------------------------
 with col2:
     st.markdown("<div class='card'><h4>Impacto de los sistemas digitales en implantes cerebrales adaptativos</h4><p>Los implantes cerebrales adaptativos digitales permiten monitorear la actividad cerebral y ajustar la estimulación en tiempo real, mejorando tratamientos neurológicos y la calidad de vida, aunque plantean retos éticos y de seguridad.</p></div>", unsafe_allow_html=True)
-    st.markdown("<div class='card'><h4> Biocombustibles de algas genéticamente editadas</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
-    st.markdown("<div class='card'><h4>Computación reversible y su impacto en los sistemas digitales</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><h4> Biocombustibles de algas genéticamente editadas</h4><p>Los biocombustibles de algas genéticamente editadas se producen al modificar algas para aumentar su eficiencia en la generación de lípidos y energía renovable, ofreciendo una alternativa sostenible a los combustibles fósiles, aunque con desafíos técnicos y ambientales.n</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><h4>Computación reversible y su impacto en los sistemas digitales</h4><p>La computación reversible busca procesar información sin pérdida de energía al invertir las operaciones lógicas, lo que podría reducir el consumo energético y transformar la eficiencia de los sistemas digitales.</p></div>", unsafe_allow_html=True)
 
 # ---------------------------
 # Columna 3: Tu Chatbot
