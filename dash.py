@@ -60,9 +60,9 @@ with col1:
 # Columna 2: Novedades
 # ---------------------------
 with col2:
-    st.markdown("<div class='card'><h4>Novedad Tecnológica 1</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
-    st.markdown("<div class='card'><h4>Novedad Tecnológica 2</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
-    st.markdown("<div class='card'><h4>Novedad Tecnológica 3</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><h4>Impacto de los sistemas digitales en implantes cerebrales adaptativos</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><h4> Biocombustibles de algas genéticamente editadas</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><h4>Computación reversible y su impacto en los sistemas digitales</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
 
 # ---------------------------
 # Columna 3: Tu Chatbot
