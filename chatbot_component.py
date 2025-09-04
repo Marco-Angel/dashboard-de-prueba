@@ -1,9 +1,4 @@
 # chatbot_component.py
-import streamlit as st
-
-def show_chatbot():
-    st.write("Aquí va tu chatbot real")
-# chatbot_component.py
 import os
 import requests
 import streamlit as st
@@ -22,7 +17,6 @@ def get_secret(key, default=None):
 API_KEY = get_secret("DEEPSEEK_API_KEY")
 MODEL = get_secret("MODEL", "deepseek-chat")
 
-
 # === Función principal para mostrar el chatbot en el dashboard ===
 def show_chatbot():
     if not API_KEY:
@@ -31,14 +25,12 @@ def show_chatbot():
 
     st.subheader("👨‍🏫 Chatbot - Profesor de Ingeniería Electrónica")
 
-    if "history" not in st.session_state:
-        st.session_state.history = []
-
     # === Función para conversar con DeepSeek ===
     def chat_with_deepseek(prompt):
         messages = [
-            {"role": "system", "content": "Eres un profesor experto en Ingeniería Electrónica. Explicas los conceptos de manera clara, sencilla y en español, como si estuvieras enseñando a un estudiante universitario."}
-        ] + st.session_state.history + [{"role": "user", "content": prompt}]
+            {"role": "system", "content": "Eres un profesor experto en Ingeniería Electrónica. Explicas los conceptos de manera clara, sencilla y en español, como si estuvieras enseñando a un estudiante universitario."},
+            {"role": "user", "content": prompt}
+        ]
         
         payload = {"model": MODEL, "messages": messages, "temperature": 0.4}
         headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
@@ -50,22 +42,15 @@ def show_chatbot():
         except Exception as e:
             return f"Error: {e}"
 
-    # === Mostrar historial ===
-    for msg in st.session_state.history:
-        st.markdown(f"**{'Tú' if msg['role']=='user' else 'Profesor'}:** {msg['content']}")
-
     # === Entrada del usuario (Enter para enviar) ===
     user_input = st.chat_input("Escribe tu pregunta de Ingeniería Electrónica...")
 
     if user_input:
-        # Guardar mensaje del usuario
-        st.session_state.history.append({"role": "user", "content": user_input})
-
         # Obtener respuesta
         response = chat_with_deepseek(user_input)
-        st.session_state.history.append({"role": "assistant", "content": response})
 
-        # Mostrar texto
+        # Mostrar conversación (sin historial, solo última)
+        st.markdown(f"**Tú:** {user_input}")
         st.markdown(f"**Profesor:** {response}")
 
         # Generar voz con gTTS
@@ -76,7 +61,3 @@ def show_chatbot():
         except Exception as e:
             st.error(f"Error generando voz: {e}")
 
-    # === Botón para reiniciar ===
-    if st.button("Reiniciar conversación"):
-        st.session_state.history = []
-        st.rerun()
