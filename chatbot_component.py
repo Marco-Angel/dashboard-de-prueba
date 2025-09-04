@@ -23,7 +23,7 @@ def show_chatbot():
         st.error("⚠️ No se encontró la API Key. Configúrala en Streamlit Secrets.")
         return
 
-    st.subheader("🦾Chatbot - Avances Tecnologicos Explicados👽")
+    st.subheader("🦾Chatbot - Avances Tecnologicos Explicados")
 
     # === Función para conversar con DeepSeek ===
     def chat_with_deepseek(prompt):
