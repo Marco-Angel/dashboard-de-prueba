@@ -60,7 +60,7 @@ with col1:
 # Columna 2: Novedades
 # ---------------------------
 with col2:
-    st.markdown("<div class='card'><h4>Impacto de los sistemas digitales en implantes cerebrales adaptativos</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><h4>Impacto de los sistemas digitales en implantes cerebrales adaptativos</h4><p>Los implantes cerebrales adaptativos digitales permiten monitorear la actividad cerebral y ajustar la estimulación en tiempo real, mejorando tratamientos neurológicos y la calidad de vida, aunque plantean retos éticos y de seguridad.</p></div>", unsafe_allow_html=True)
     st.markdown("<div class='card'><h4> Biocombustibles de algas genéticamente editadas</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
     st.markdown("<div class='card'><h4>Computación reversible y su impacto en los sistemas digitales</h4><p>Breve Descripción</p></div>", unsafe_allow_html=True)
 
