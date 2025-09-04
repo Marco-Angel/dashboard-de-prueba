@@ -22,8 +22,8 @@ st.markdown(
         box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
     }
     .card {
-        background-color: white;
-        padding: 18px;
+        background-color: green;
+        padding: 20px;
         border-radius: 15px;
         text-align: center;
         margin: 12px 0;
