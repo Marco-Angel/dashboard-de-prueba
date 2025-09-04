@@ -42,7 +42,7 @@ st.markdown("<div class='header'>PRESENTANDO NOVEDADES TECNOLÓGICAS CON PEPPER<
 # ---------------------------
 # Layout
 # ---------------------------
-col1, col2, col3 = st.columns([1.3, 1.3, 0.8])
+col1, col2, col3 = st.columns([1, 1.3, 1.1])
 
 # ---------------------------
 
@@ -68,6 +68,5 @@ with col2:
 # Columna 3: Tu Chatbot
 # ---------------------------
 with col3:
-    st.markdown("### 💬 Chatbot de confianza")
     chatbot_component.show_chatbot()  # 👈 aquí se ejecuta tu chatbot
 
