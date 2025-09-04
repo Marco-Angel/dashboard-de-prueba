@@ -43,7 +43,7 @@ def show_chatbot():
             return f"Error: {e}"
 
     # === Entrada del usuario (Enter para enviar) ===
-    user_input = st.chat_input("Que dudas tienes sobre lo dicho por Pepper")
+    user_input = st.chat_input("Que dudas tienes sobre la expocion de Pepper")
 
     if user_input:
         # Obtener respuesta
