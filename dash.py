@@ -45,20 +45,16 @@ st.markdown("<div class='header'>PRESENTANDO NOVEDADES TECNOLÓGICAS CON PEPPER<
 col1, col2, col3 = st.columns([1.3, 1.3, 0.8])
 
 # ---------------------------
-# Columna 1: Video (autoplay)
-# ---------------------------
+
+# Columna 1: Video
 with col1:
     st.subheader("🤖 Pepper")
     video_path = "pepper_video.mp4"
     if os.path.exists(video_path):
-        video_html = f"""
-        <video width="100%" autoplay muted loop playsinline>
-            <source src="{video_path}" type="video/mp4">
-        </video>
-        """
-        st.markdown(video_html, unsafe_allow_html=True)
+        st.video(video_path)  # 👈 siempre aparece
     else:
         st.warning("⚠️ No encontré el archivo `pepper_video.mp4`. Súbelo en la carpeta del proyecto.")
+
 
 # ---------------------------
 # Columna 2: Novedades
