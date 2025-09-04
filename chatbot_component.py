@@ -23,12 +23,12 @@ def show_chatbot():
         st.error("⚠️ No se encontró la API Key. Configúrala en Streamlit Secrets.")
         return
 
-    st.subheader("👨‍🏫 Chatbot - Profesor de Ingeniería Electrónica")
+    st.subheader("🦾Chatbot - Avances Tecnologicos Explicados👽")
 
     # === Función para conversar con DeepSeek ===
     def chat_with_deepseek(prompt):
         messages = [
-            {"role": "system", "content": "Eres un profesor experto en Ingeniería Electrónica. Explicas los conceptos de manera clara, sencilla y en español, como si estuvieras enseñando a un estudiante universitario."},
+            {"role": "system", "content": "Solo contestas preguntas relacionadas a Computación reversible y su impacto en los sistemas digitales, Biocombustibles de algas genéticamente editadas y Impacto de los sistemas digitales en implantes cerebrales adaptativos; en español y de forma muy sencilla y rapida"},
             {"role": "user", "content": prompt}
         ]
         
