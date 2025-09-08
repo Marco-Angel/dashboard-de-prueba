@@ -46,16 +46,8 @@ Cada grupo de trabajo desarrollará actividades específicas en cinco puntos pri
   2. Interacción con Pepper.
   3. Chatbot personalizado.
   4. Dashboard integrado.
-  5. Uso de Git y GitHub.
-  6. Conclusiones.
+
 
 ---
 
-## ⚫ Quinto Punto: Manejo de Git, GitHub y Readme
-- Cada estudiante trabajará en una **rama individual** en GitHub:
-  ```bash
-  git checkout -b rama-estudiante
-  git add .
-  git commit -m "avance proyecto"
-  git push origin rama-estudiante
 
